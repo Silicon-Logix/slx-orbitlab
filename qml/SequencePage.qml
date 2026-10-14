@@ -630,7 +630,7 @@ ColumnLayout {
                     Text {
                         required property var modelData
                         Layout.fillWidth: true
-                        text: Number(modelData.executed_s).toFixed(1) + " s · " + root.describe(modelData.name, JSON.stringify(modelData.args)) + " · " + (modelData.response === 0 ? "ACK OK" : "rifiutato")
+                        text: Number(modelData.executed_s).toFixed(1) + " s · " + root.describe(modelData.name, JSON.stringify(modelData.args)) + " · " + (modelData.response === 0 ? "ACK OK" : "rejected")
                         color: modelData.response === 0 ? "#087762" : "#a33a36"
                         font.pixelSize: 13
                         wrapMode: Text.WordWrap

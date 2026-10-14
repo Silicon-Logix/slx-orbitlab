@@ -67,7 +67,7 @@ class EarthCamera:
             small = ImageFont.truetype("DejaVuSans.ttf", 12)
         except OSError:
             font = small = ImageFont.load_default()
-        draw.text((14, 13), "OSSERVAZIONE TERRESTRE SIMULATA", font=font, fill="#e7edf8")
+        draw.text((14, 13), "SIMULATED EARTH OBSERVATION", font=font, fill="#e7edf8")
         def pixel(point):
             relative_lon = (point[1]-lon+180) % 360 - 180
             return (12+(relative_lon+13)/26*359, 46+((lat+9)-point[0])/18*255)

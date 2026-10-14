@@ -1,0 +1,11 @@
+{
+  "kind": "custom-development-services",
+  "modules": [
+    {"id": "flight-components", "title": "F Prime mission components", "technique": "Customer-specific component models, command dictionaries, sequences and deployment integration.", "inputs": "Mission requirements and interface definitions.", "validation": "Unit, integration and operational scenario tests."},
+    {"id": "adcs", "title": "Guidance & navigation", "technique": "Sensor fusion, pointing guidance and actuator allocation evaluated against Basilisk plant models.", "inputs": "Sensor specifications, inertia and mission accuracy budgets.", "validation": "Monte Carlo campaigns and fault recovery criteria."},
+    {"id": "eps-firmware", "title": "RTEMS energy controller", "technique": "A separate RTEMS firmware node in Renode, integrated after board and peripheral compatibility tests.", "inputs": "Power interfaces, thresholds and selected BSP.", "validation": "ELF boot, clock, interrupt, UART and protection tests."},
+    {"id": "power-model", "title": "Energy model calibration", "technique": "Measured panel, converter and battery characteristics replace illustrative power assumptions.", "inputs": "Efficiency maps, load profiles and battery test data.", "validation": "Energy balance and parameter sensitivity studies."},
+    {"id": "verification", "title": "Verification campaigns", "technique": "Automated mission sweeps, requirement traceability and controlled regression evidence.", "inputs": "Acceptance thresholds and fault catalogue.", "validation": "Repeatability, coverage and independent result checks."},
+    {"id": "customer-core", "title": "Embedded software integration", "technique": "A separable binary library and customer adapters for software or emulated hardware subsystems.", "inputs": "Target toolchain, timing and transport contracts.", "validation": "ABI compatibility, timing budgets and interface conformance."}
+  ]
+}

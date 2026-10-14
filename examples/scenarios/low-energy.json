@@ -1,0 +1,9 @@
+{
+  "schema": "slx.orbitlab.scenario/1", "name": "Insufficient energy", "id": "low-energy",
+  "seed": 42, "step_s": 0.5, "duration_s": 1600, "altitude_m": 550000,
+  "capacity_j": 648000, "initial_soc": 0.08, "reserve_fraction": 0.05,
+  "initial_stowed": true, "epoch_utc": "2026-10-13T10:00:00Z",
+  "ground_station": {"name": "Rome demonstration station", "latitude_deg": 41.9028, "longitude_deg": 12.4964},
+  "targets": [{"id": 1, "name": "Rome", "latitude_deg": 41.9028, "longitude_deg": 12.4964, "priority": 80}],
+  "faults": []
+}

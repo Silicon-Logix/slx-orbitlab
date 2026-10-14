@@ -1,0 +1,11 @@
+Silicon LogiX / SLX OrbitLab
+Copyright (c) 2026 Marco Pezzullo (Silicon LogiX).
+Author: Marco Pezzullo
+License: Silicon LogiX Evaluation License 1.0. See LICENSE.
+
+Original satellite geometry, mechanisms and logo are supplied Silicon LogiX assets.
+Natural Earth land outlines are public-domain source data; indicative terrain and cloud textures are not observed imagery.
+The public assets include sixteen approved GLB exports. Native Blender scene sources are not distributed.
+The application extends the Godot viewer while retaining the asset names and hierarchy.
+NASA F Prime, Basilisk, Godot, Qt and Python are separately licensed dependencies.
+No affiliation, endorsement, certification or flight qualification is implied.

@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "asset_pack": "SLX OrbitLab 3D",
+  "version": "0.1.0",
+  "units": "metres",
+  "native_axes": "X right, Y back, Z up",
+  "gltf_mapping": {
+    "x": "x",
+    "y": "z",
+    "z": "-y"
+  },
+  "gltf_mapping_description": "(x,y,z)_native -> (x,z,-y)_gltf",
+  "scope": "Art assets and geometry only; flight software, dynamics, firmware and mission scheduling are not implemented by this pack.",
+  "spacecraft": {
+    "root": "Spacecraft_Root",
+    "bus_dimensions_m": [
+      1.3,
+      1.15,
+      1.45
+    ],
+    "deployed_aabb_native": {
+      "min": [
+        -2.5949997901916504,
+        -0.8490000367164612,
+        -0.7789999842643738
+      ],
+      "max": [
+        2.5949997901916504,
+        0.636959969997406,
+        1.1049998998641968
+      ]
+    },
+    "mesh_count": 536,
+    "assembly_nodes": {
+      "structure": "Structure",
+      "shell": "Shell",
+      "optical_payload": "Optical_Payload",
+      "sensors": "Navigation_Sensors",
+      "onboard_computer": "Onboard_Computer",
+      "power_controller": "Power_Controller",
+      "battery": "Battery_Module",
+      "reaction_wheels": "Reaction_Wheel_Assembly",
+      "solar_left": "Solar_Left_Deploy",
+      "solar_right": "Solar_Right_Deploy",
+      "communications": "Communications",
+      "harness": "Harness"
+    },
+    "pivots": [
+      {
+        "node": "Solar_Left_Deploy",
+        "axis_native": "Y",
+        "axis_gltf": "Z",
+        "gltf_axis_sign": -1,
+        "stowed_native_deg": 90,
+        "deployed_native_deg": 0
+      },
+      {
+        "node": "Solar_Left_Fold",
+        "axis_native": "Y",
+        "axis_gltf": "Z",
+        "gltf_axis_sign": -1,
+        "stowed_native_deg": 180,
+        "deployed_native_deg": 0
+      },
+      {
+        "node": "Solar_Left_Track",
+        "axis_native": "X",
+        "axis_gltf": "X",
+        "gltf_axis_sign": 1,
+        "min_deg": -30,
+        "max_deg": 30
+      },
+      {
+        "node": "Solar_Right_Deploy",
+        "axis_native": "Y",
+        "axis_gltf": "Z",
+        "gltf_axis_sign": -1,
+        "stowed_native_deg": -90,
+        "deployed_native_deg": 0
+      },
+      {
+        "node": "Solar_Right_Fold",
+        "axis_native": "Y",
+        "axis_gltf": "Z",
+        "gltf_axis_sign": -1,
+        "stowed_native_deg": 180,
+        "deployed_native_deg": 0
+      },
+      {
+        "node": "Solar_Right_Track",
+        "axis_native": "X",
+        "axis_gltf": "X",
+        "gltf_axis_sign": 1,
+        "min_deg": -30,
+        "max_deg": 30
+      }
+    ],
+    "pointing_axis_native": [
+      0,
+      -1,
+      0
+    ],
+    "pointing_axis_gltf": [
+      0,
+      0,
+      1
+    ]
+  },
+  "ground_station": {
+    "root": "GroundStation_Root",
+    "azimuth_pivot": "GroundStation_AzimuthPivot",
+    "elevation_pivot": "GroundStation_ElevationPivot",
+    "motion_contract": {
+      "coordinate_system": "Blender right-handed metres; Z up",
+      "root": "GroundStation_Root",
+      "azimuth_pivot": "GroundStation_AzimuthPivot",
+      "azimuth_axis": "+Z",
+      "azimuth_range_degrees": [
+        -180,
+        180
+      ],
+      "elevation_pivot": "GroundStation_ElevationPivot",
+      "elevation_axis": "+X in azimuth frame",
+      "elevation_range_degrees": [
+        10,
+        85
+      ],
+      "nominal_elevation_degrees": 20,
+      "nominal_azimuth_degrees": 0,
+      "dish_boresight_local": [
+        0,
+        1,
+        0
+      ],
+      "elevation_pivot_local_m": [
+        0,
+        0,
+        8.5
+      ],
+      "feed_focus_local_m": [
+        0,
+        3.75,
+        0
+      ],
+      "dish_aperture_diameter_m": 8,
+      "electrical_interfaces": "Stationary/azimuth slip ring and hollow elevation trunnion; no cable stretches across rotating pivots",
+      "limitations": "Visual engineering demonstrator; no structural or RF performance qualification"
+    }
+  },
+  "orbital_environment": {
+    "root": "ENV_OrbitalDisplay",
+    "earth_root": "ENV_EarthRoot",
+    "display_scale": true,
+    "earth_radius_display_m": 8,
+    "earth_center_display_m": [
+      0,
+      0,
+      -10.3
+    ]
+  },
+  "exports": [
+    "exports/Component_battery.glb",
+    "exports/Component_communications.glb",
+    "exports/Component_onboard_computer.glb",
+    "exports/Component_optical_payload.glb",
+    "exports/Component_power_controller.glb",
+    "exports/Component_reaction_wheels.glb",
+    "exports/Component_sensors.glb",
+    "exports/Component_solar_left.glb",
+    "exports/Component_solar_right.glb",
+    "exports/SLX_OrbitLab_GroundStation.glb",
+    "exports/SLX_OrbitLab_OrbitalEnvironment.glb",
+    "exports/SLX_OrbitLab_OrbitalScene.glb",
+    "exports/SLX_OrbitLab_Spacecraft_Cutaway.glb",
+    "exports/SLX_OrbitLab_Spacecraft_Deployed.glb",
+    "exports/SLX_OrbitLab_Spacecraft_Exploded.glb",
+    "exports/SLX_OrbitLab_Spacecraft_Stowed.glb"
+  ],
+  "shell_nodes": [
+    "Shell_Front_Top",
+    "Shell_Front_Bottom",
+    "Shell_Front_Side",
+    "Shell_Front_Side.001",
+    "Shell_Back",
+    "Shell_Left",
+    "Shell_Right",
+    "Shell_Top",
+    "Shell_Base"
+  ],
+  "assembly_note": "Hide Shell for cutaway; internal Structure and all functional assemblies remain attached.",
+  "sources": {
+    "logo": "Original supplied Silicon LogiX logo, cropped transparent margins only.",
+    "geometry": "Original procedural illustrative geometry; not a reproduction of a commercial spacecraft."
+  }
+}

@@ -1,0 +1,34 @@
+<!-- Silicon LogiX / SLX OrbitLab
+Copyright (c) 2026 Marco Pezzullo (Silicon LogiX).
+Author: Marco Pezzullo
+License: Silicon LogiX Evaluation License 1.0. See LICENSE. -->
+
+# Numerical model and limits
+
+Vehicle commands use the bounded C++ controller and Basilisk wheel dynamics. Manual Sun, nadir and relative slews suspend observation scheduling until autonomous mode is selected again. These attitude maneuvers retain the physical orbit. The optional beacon has a four-second default simulated period, consumes 2 W while on and remains subject to the energy reserve and EPS permission. Optical and downlink enable commands add software permissions; geometric access, pointing and safety checks still apply.
+
+New observations sample the supplied low-resolution Natural Earth surface texture through a 35-degree pinhole camera using true body attitude and ray intersections with the spherical Earth. The raw product remains a deterministic 256 × 256 monochrome PGM. A derived PNG shows cartographic context, the target and the camera footprint; the ground preview is regenerated only after the received PGM passes its checksum. Context colors are map data, while the sensor inset shows the received monochrome data. This model has no terrain relief, clouds, calibrated optical response or scientific radiometry. Earlier recordings retain their original test-pattern products and integrity manifests.
+
+The example uses a 550 km circular Earth orbit and a 65 kg rigid hub with inertia `diag(18,20,16)` kg m². Basilisk integrates orbit and attitude with three balanced reaction-wheel effectors; each commanded body-axis torque is limited to ±0.2 N m. These values are declared demonstration parameters, not properties derived from the mesh or qualified satellite hardware.
+
+The orbit frame is an Earth-centered inertial mathematical reference. At mission epoch its axes coincide with the configured Earth-fixed axes; this is not a precision IERS/J2000 transformation. Earth-fixed coordinates use WGS84 surface geometry and constant Earth rotation rate 7.2921150e-5 rad/s. Sun direction is fixed inertially during each run. Basilisk models spherical Earth occultation of that Sun. This demonstration excludes SPICE kernels, J2, atmosphere, terrain, clouds, thermal environment and flexible-body dynamics.
+
+Measurements use metres, m/s, seconds, radians, rad/s, watts and joules. Quaternions are `[w,x,y,z]`, body-to-inertial. Basilisk MRP/DCM conventions are converted once. Optical boresight is body `-Y`, as specified by the asset manifest. The C++ controller uses the navigation measurement, validity flag and relative target angular-rate feedforward. Ideal attitude remains diagnostic truth for the display and acquisition error report.
+
+Access prediction uses bounded two-body elliptic propagation over 24 simulated hours: 10-second spacing for the first 12000 seconds, then 30 seconds. Executed access is checked every physical step. Target elevation must exceed 10 degrees and off-nadir angle must be below 40 degrees. Acquisitions require measured pointing error below 0.5 degrees, low tracking-rate error, three seconds of stability and twelve seconds of exposure. Arbitrary targets outside accessible passes remain pending; they are never teleported into visibility.
+
+Initial conditions pass the first selected target at approximately 300 seconds. Adding later jobs preserves the actual trajectory. Core 0.6 adds finite, bounded RTN delta-v commands, body +X thrust integrated with Basilisk `extForceTorque`, explicit propellant debit and sensor/energy guards. Dynamic mass remains 65 kg; there is no tank, variable-mass, valve or plume model. See [orbital operations](orbital-operations.md) for limits and verification. Neither a target selection nor an attitude command performs an inter-city orbital transfer.
+
+The battery has 648000 J (180 Wh) finite capacity. Basilisk sums solar generation and the active load. The two panels provide 1 m² total active area at efficiency 0.25. Effective area follows confirmed deployment; tracking is restricted to ±30 degrees. Battery charge/discharge efficiency is ideal; cell chemistry, voltage, temperature, ageing and brownout electronics are excluded. Safety reserve and activity costs govern discretionary loads; extended loss of generation can still exhaust the baseline load budget.
+
+Both policies enforce the configured minimum reserve. Priority-first budgets reserve plus 18000 J. Energy-aware adds 15% of capacity as a planning margin. Deferred activity uses the baseline load rather than the 115 W acquisition load. The comparison evaluates these two explicitly different policies; it is not a globally optimal scheduler.
+
+Synthetic optical products are deterministic 256×256 monochrome PGM frames, with derived geographic PNG previews. Real bytes are saved onboard and copied to the ground directory in 8192 byte/s chunks only during a geometric contact with sufficient energy. Delivery requires matching SHA-256. The radio model has no modulation, propagation loss or antenna link budget. The ground antenna has a 10–85 degree elevation range. Conventional azimuth is clockwise from north; the supplied native +Z hinge rotates north toward west, so the graphical hinge receives the negative conventional azimuth.
+
+Godot applies Blender `(x,y,z)` → glTF `(x,z,-y)` exactly once. Close-up meshes retain metre scale. The Earth radius is 8 display units at native `(0,0,-10.3)`, with supplied geographic rotation `R_x(-20°) R_z(-72°)`. Orbit presentation uses an Earth-fixed frame, numerical radius ratios and a separate 0.16 spacecraft presentation scale. Existing decorative trajectory and link overlays are hidden. Cutaway/exploded offsets never enter dynamics or shadow calculations.
+
+Numerical repeatability is validated for the pinned Linux runtime and identical seed. Cross-platform bitwise identity is not claimed. Reports include incomplete exposure samples as acquisition samples; a missing acquisition has `null` pointing statistics.
+
+The native `PointingError` channel describes the active pointing controller and is zero when that controller is idle. The GUI's separately labelled simulator-truth error remains an instantaneous target angle outside acquisition too; report precision is computed during exposure, so an idle target angle is not an acquisition-accuracy result.
+
+The energy forecast covers 600 seconds with measured solar power held during predicted sunlight. The scan is refreshed every 60 seconds; it is an estimate, not future attitude truth. Safe mode has explicit low-power loads and reserve hysteresis. Logical onboard capacity, queued products, minimum repeat intervals and deadlines affect decisions in the C++ component. [Continuous operations](continuous-operations.md) documents these guards, physical faults, recording quotas and the scope of crash recovery. Pointing charts show gaps outside active slew/exposure.

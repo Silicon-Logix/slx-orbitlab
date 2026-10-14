@@ -1,0 +1,24 @@
+<!-- Silicon LogiX / SLX OrbitLab
+Copyright (c) 2026 Marco Pezzullo (Silicon LogiX).
+Author: Marco Pezzullo
+License: Silicon LogiX Evaluation License 1.0. See LICENSE. -->
+<RCC><qresource prefix="/">
+<file>qml/Main.qml</file><file>qml/Theme.qml</file><file>qml/ActionButton.qml</file>
+<file>qml/Panel.qml</file><file>qml/Metric.qml</file><file>qml/TraceChart.qml</file><file>qml/AboutDialog.qml</file>
+<file>qml/ConsoleComboBox.qml</file><file>qml/ConsoleTextField.qml</file>
+<file>qml/ConsoleSpinBox.qml</file><file>qml/ConsoleCheckBox.qml</file>
+<file>qml/GroundTrack.qml</file><file>qml/OperationsPage.qml</file><file>qml/VerificationPage.qml</file>
+<file>qml/TopologyView.qml</file>
+        <file>qml/InspectorPage.qml</file>
+        <file>qml/VehiclePanel.qml</file>
+<file>qml/MissionWorkflow.qml</file>
+<file>qml/RecordingsList.qml</file><file>qml/SequencePage.qml</file>
+<file>qml/CommandComposer.qml</file>
+<file>qml/OrbitPage.qml</file>
+<file alias="earth/surface.png">SLX_OrbitLab_3D/assets/earth/earth_surface_2048.png</file>
+<file alias="brand/Silicon_LogiX_logo_cropped.png">assets/brand/Silicon_LogiX_logo_cropped.png</file>
+<file alias="brand/orbitlab-icon.svg">assets/brand/orbitlab-icon.svg</file>
+<file alias="engineering/capabilities.json">assets/capabilities.json</file>
+<file alias="legal/license">LICENSE</file><file alias="legal/notices">THIRD_PARTY_NOTICES.md</file>
+<file alias="legal/qt">licenses/Qt-Open-Source-LICENSE.txt</file>
+</qresource></RCC>

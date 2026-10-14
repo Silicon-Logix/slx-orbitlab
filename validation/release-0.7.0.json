@@ -1,0 +1,93 @@
+{
+  "schema": "slx.orbitlab.release-acceptance/1",
+  "version": "0.7.0",
+  "date": "2026-10-14",
+  "language": "en",
+  "environment": {
+    "desktop": "Windows / Qt 6.12.0 / MinGW 13.1",
+    "backend": "WSL Ubuntu 22.04 / F Prime 4.3.0 / Basilisk 2.12.0",
+    "viewer": "Godot 4.5"
+  },
+  "checks": {
+    "desktop_usability": {
+      "passed": true,
+      "delivered": 2,
+      "delivered_bytes": 131176,
+      "native_channels": 50,
+      "command_examples_and_operator_edits": true,
+      "beacon_caption_stable": true,
+      "telemetry_scroll_preserved": true,
+      "component_focus_isolation_and_pick": true,
+      "inspector_ready": true,
+      "native_beacon_visible_on_and_off": true
+    },
+    "desktop_sequences": {
+      "passed": true,
+      "native_sequence_editor_and_timing": true,
+      "recordings_layout_scroll_and_replay": true
+    },
+    "desktop_orbits": {
+      "passed": true,
+      "native_orbit_burn_and_city_presets": true,
+      "measured_propulsion_visible": true,
+      "confirmed_thrust_visible_in_godot": true,
+      "delivered_delta_v_mps": 2,
+      "propellant_kg": 0.9397440419603953,
+      "orbital_state": {
+        "apogee_altitude_m": 557311.447360022,
+        "burn_count": 1,
+        "burn_state": 3,
+        "eccentricity": 0.000527375893404828,
+        "force_body_n": [
+          0,
+          0,
+          0
+        ],
+        "inclination_rad": 1.01471902365871,
+        "perigee_altitude_m": 550000.126532197,
+        "period_s": 5743.53587669634,
+        "prediction_horizon_s": 86400,
+        "remaining_delta_v_mps": 0,
+        "requested_delta_v_mps": 2,
+        "semimajor_axis_m": 6931792.78694611
+      }
+    },
+    "binary_sdk": {
+      "passed": true,
+      "private_sources_present": false,
+      "core_abi": 2,
+      "core_sha256": "eb84cee4badf2d4b524613cdb2dfcb217a079ac31c1ec4257d7bcfdad4df9855",
+      "delivered": 1,
+      "pointing_rms_deg": 0.05856239284671855,
+      "delivered_delta_v_mps": 2.0,
+      "final_propellant_kg": 0.9397440419603953
+    },
+    "desktop_binary_sdk": {
+      "passed": true,
+      "native_orbit_burn_and_city_presets": true,
+      "confirmed_thrust_visible_in_godot": true,
+      "native_channels": 50,
+      "delivered_delta_v_mps": 2,
+      "propellant_kg": 0.9397440419603953
+    },
+    "linux_integration": {
+      "passed": true,
+      "tests": 26
+    },
+    "windows_ctest": {
+      "passed": true,
+      "tests": 3
+    },
+    "publication_regressions": {
+      "passed": true,
+      "tests": 8
+    },
+    "binary_sdk_windows_ctest": {
+      "passed": true,
+      "tests": 3,
+      "private_sources_present": false
+    }
+  },
+  "passed": true,
+  "scope": "Engineering demonstration; see docs/model.md. Public results omit developer paths, operator recordings and diagnostic transcripts."
+}

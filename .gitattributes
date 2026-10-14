@@ -1,0 +1,20 @@
+# Silicon LogiX / SLX OrbitLab
+# Copyright (c) 2026 Marco Pezzullo (Silicon LogiX).
+# Author: Marco Pezzullo
+# License: Silicon LogiX Evaluation License 1.0. See LICENSE.
+* text=auto
+*.cpp text eol=lf
+*.h text eol=lf
+*.hpp text eol=lf
+*.qml text eol=lf
+*.gd text eol=lf
+*.fpp text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.glb binary
+*.blend binary
+*.png binary
+*.ico binary

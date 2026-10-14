@@ -1,0 +1,44 @@
+{
+  "schema": "slx.orbitlab.embedded-qualification/1",
+  "passed": true,
+  "identity": {
+    "platform": "LEON3",
+    "rtems": "ORBITLAB_EPS_READY RTEMS 5.0.0 ABI 1",
+    "renode": "1.16.1",
+    "firmware_sha256": "c9bc39589d85d1d810ae85036cabccd9c17aa9db9f63391f998a1f606289b9d6",
+    "timer_hz": 1000,
+    "timer_prescaler": 49,
+    "cpu_mips": 50,
+    "advance_immediately": true,
+    "quantum_s": 0.0001,
+    "ram_start": "0x40000000",
+    "ram_end": "0x40400000"
+  },
+  "checks": [
+    "Nominal power permission",
+    "Low-energy load shedding",
+    "Critical-energy load shedding",
+    "Malformed UART CRC rejected",
+    "RTEMS periodic task and timer interrupts",
+    "Recovery after malformed frame"
+  ],
+  "first_response": {
+    "mode": "RTEMS / Renode",
+    "sequence": 1,
+    "time_s": 0,
+    "permitted_w": 115.0,
+    "flags": 0,
+    "heartbeat": 10,
+    "response": "EPS_ACK 1 0 115000 0 10 baa0e910"
+  },
+  "final_response": {
+    "mode": "RTEMS / Renode",
+    "sequence": 4,
+    "time_s": 2,
+    "permitted_w": 35.0,
+    "flags": 0,
+    "heartbeat": 30,
+    "response": "EPS_ACK 4 2000 35000 0 30 c1938fcb"
+  },
+  "loader": "ELF with explicit boot stack and CLOCK_SPEED; no physical board or PROM image"
+}

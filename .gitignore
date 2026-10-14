@@ -1,0 +1,54 @@
+# Silicon LogiX / SLX OrbitLab
+# Copyright (c) 2026 Marco Pezzullo (Silicon LogiX).
+# Author: Marco Pezzullo
+# License: Silicon LogiX Evaluation License 1.0. See LICENSE.
+build/
+dist/
+workspace/
+backend/fprime/build-artifacts/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.log
+SLX_OrbitLab_3D/.godot/
+# Public exports are prepared from an allowlist; private/ never belongs in a public tree.
+private/
+*.lnk
+
+# Approved evaluation binaries are delivered separately from the GitHub source repository.
+sdk/
+runtime/
+*.dll
+*.dll.a
+*.so
+*.so.*
+*.exe
+*.elf
+*.a
+*.lib
+*.o
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.map
+*.dmp
+*.blend
+*.blend[0-9]
+*.bak
+*.tmp
+*.orig
+*.rej
+.godot/
+.venv/
+venv/
+.idea/
+.vscode/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+CODEX_HANDOFF.md
+AGENTS.md

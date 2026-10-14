@@ -1,0 +1,76 @@
+SILICON LOGIX EVALUATION LICENSE 1.0
+
+Author: Marco Pezzullo | Silicon LogiX.
+Copyright (c) 2026 Marco Pezzullo (Silicon LogiX).
+All rights reserved except as expressly granted below.
+
+1. Scope
+
+This license covers SLX OrbitLab source code, QML interface, original
+Silicon LogiX visual assets, documentation, and demonstration data authored
+or supplied by Marco Pezzullo for Silicon LogiX (the
+"Software"). Qt and any third-party components remain under their own licenses.
+Nothing here limits rights granted independently by those third-party licenses.
+The proprietary core implementation is not included in the source distribution.
+Approved core binary copies
+are included only for evaluation with SLX OrbitLab, including private
+modifications permitted by section 2. Integration into other products requires
+a separate written license.
+Datasets and reports created from users' own assets remain their own content.
+
+2. Permission to evaluate and modify privately
+
+You may download, compile, run, inspect, and copy the Software for personal
+study or internal evaluation, including evaluation by a business considering
+Silicon LogiX products or services. You may modify the Software for your own
+private, non-commercial evaluation. Entering data and
+creating reports with the unmodified application do not count as modifying
+the Software.
+
+3. Sharing the unmodified Software
+
+You may share unmodified copies, including binaries compiled from unmodified
+source, without charge. Every copy must retain this license, all copyright
+and author notices, and the names "Silicon LogiX" and "SLX OrbitLab" as
+the identification of the Software and its origin. You may not present a copy
+under a different product or company name, or imply that another person or
+company created it.
+
+4. Restrictions
+
+You may not publish, distribute, sublicense, sell, or otherwise make available
+modified versions of the Software or patches containing modified Software.
+You may not use the Software in production, provide it to customers as part of
+a paid product or service, sell access to it, or otherwise exploit it for a
+commercial purpose. You may not remove or obscure author, copyright, license,
+or Silicon LogiX origin notices. These restrictions do not limit rights that
+applicable law grants independently of this license.
+
+5. Names and branding
+
+"Silicon LogiX", "SiliconLogix", "SLX OrbitLab", and associated visual
+identifiers may be reproduced only as needed to identify and attribute an
+unmodified copy. No broader right to use these names or identifiers is
+granted. This license does not authorize claims of endorsement, partnership,
+or official status.
+
+6. Other permissions
+
+Any use beyond these terms, including commercial use or distribution of a
+modified version, requires prior written permission from Marco Pezzullo or
+the authorized rights holder for Silicon LogiX. No rights are granted by
+implication. You may not sublicense the Software.
+
+7. Termination and warranty
+
+Your permissions under this license end if you breach its terms. To the
+extent permitted by law, the Software is provided "as is", without warranty
+of any kind, and the copyright holder is not liable for damages arising from
+its use.
+
+8. Third-party library rights
+
+You may modify, replace and relink LGPL libraries used by this application
+and run the resulting combined work. Reverse engineering needed to debug
+modifications to those libraries is permitted. No restriction in this license
+limits those rights or other rights independently granted by third-party terms.
